@@ -1,0 +1,175 @@
+@import "sass/variables"
+@import "sass/animations"
+@import "sass/mixins"
+@import "sass/typography"
+@import "sass/utilities"
+
+*,
+*::after,
+*::before
+    padding: 0
+    margin: 0
+
+html 
+    font-size: 62.5%
+
+body 
+    box-sizing: border-box
+
+
+.header
+    background-image: linear-gradient(to right, rgba($dark-color, 0.4), rgba($dark-color, 0.4)), url("images/Background_Image.png")
+    background-color: $dark-color
+    background-position: center
+    background-size: cover
+    .navbar-trans
+        background-color: transparent
+        padding-top: 4rem
+        .navbar-nav
+            text-transform: uppercase
+            font-size: 1.4rem
+            font-weight: 400
+            line-height: 4.1rem
+            text-align: center
+            .nav-link
+                color:  $white-color
+                padding: 0 2rem
+                letter-spacing: 1.5px
+                transition-duration: 0.5s
+                &:hover
+                    background-color: rgba($white-color, 0.4)
+    .head-content
+        height: 70rem
+        .btn--animated
+            animation: moveInBottom 0.5s ease-out .75s
+            animation-fill-mode: backwards
+
+.services
+    &__icon
+        border-radius: 50%
+        border: 3px solid $yellow-color
+        width: 6.8rem
+        height: 6.8rem
+        padding-top: 1.2rem
+        margin: 0 auto
+    &__text
+        color: $grey-color
+        font-size: 1.4rem
+        font-weight: 400
+
+.portfolio
+    background-color: $lightblue-color
+    &__heading
+        background-color: $white-color
+        width: 100%
+        padding-bottom: 2.5rem
+
+.aboutus
+    position: relative
+    &__line
+        border-left: 3px solid $lightblue-color
+        height: 110rem
+        position: absolute
+        left: 50%
+        margin-left: -1.5px
+        top: 30rem
+        z-index: -1
+    &__content
+        .heading
+            &--main
+                display: block
+                text-transform: uppercase
+            &--sub
+                display: block
+        &--img
+            margin: 0 auto
+        &--text
+            color: $grey-color
+            font-size: 1.4rem
+            font-weight: 400
+    &__story
+        position: relative
+        padding-top: 4rem
+        &--main 
+            position: absolute
+            top: 8.5rem
+            left: 44%
+
+.team
+    background-color: $lightblue-color
+    &__workers
+        width: 79rem
+        margin: 0 auto
+        .worker
+            &__img
+                border-radius: 50%
+                border: .7rem solid $white-color
+                width: 22rem
+                height: 22rem
+            &__socjals
+                text-align: center
+                height: 5rem
+                &--icon
+                    border: 3px solid $dark-color
+                    padding-top: 0.7rem
+                    transition-duration: .5s
+                    [class^="icon-"]
+                        color: $dark-color
+                        transition-duration: .5s
+                    &:hover
+                        border: none
+                        [class^="icon-"]
+                            color: $white-color
+    &__text
+        color: $grey-color
+        font-size: 1.6rem !important
+        font-weight: 400
+        text-align: center
+        &--line
+            display: block
+
+.logo
+    width: 90rem
+    margin: 0 auto
+    &__img
+        display: inline-block
+        margin: 3.5rem auto
+
+.contact
+    background-color: $dark-color
+    height: 65rem
+    position: relative
+    .heading-secondary
+        &--main
+            color: $white-color
+    &__form
+        .inputs
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            border-radius: 3px
+            @include placeholder
+            &__form-control
+                border-radius: 2px
+                height: 5rem
+        .textarea
+            @include placeholder
+
+            &__form-control
+                height: 210px
+                border-radius: 2px
+    &__map
+        width: 45%
+        position: absolute
+        right: 0
+        top: 12rem
+
+.footer
+    &__copy
+        font-size: 1.4rem
+        line-height: 2.2rem
+        color: $dark-color
+    &__socjals
+        justify-content: center
+        &--icon
+            background-color:  $dark-color
