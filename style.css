@@ -26,6 +26,14 @@
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(1); } }
+
 .flex-centering {
   display: flex;
   flex-direction: column;
@@ -119,9 +127,11 @@
     color: #ffffff;
     font-size: 1.7rem; }
 
-.navbar-white {
-  color: #ffffff !important;
-  border-color: #ffffff !important; }
+.navbar-btn {
+  background-color: #fed136 !important;
+  transition-duration: .5s; }
+  .navbar-btn:hover {
+    transform: scale(1.2); }
 
 .container {
   width: 90rem; }
@@ -202,6 +212,11 @@ body {
     background-color: #ffffff;
     width: 100%;
     padding-bottom: 2.5rem; }
+  .portfolio [class^="col-"] {
+    transition: all .5s; }
+    .portfolio [class^="col-"]:hover {
+      transform: skewY(-2deg) scale(1.1);
+      box-shadow: 0.5rem 1rem 2rem rgba(34, 34, 34, 0.2); }
 
 .aboutus {
   position: relative; }
@@ -219,7 +234,10 @@ body {
   .aboutus__content .heading--sub {
     display: block; }
   .aboutus__content--img {
-    margin: 0 auto; }
+    margin: 0 auto;
+    animation-name: pulse;
+    animation-duration: 4s;
+    animation-iteration-count: infinite; }
   .aboutus__content--text {
     color: #777777;
     font-size: 1.4rem;
@@ -237,7 +255,15 @@ body {
   .team__workers {
     width: 79rem;
     margin: 0 auto; }
+    .team__workers .worker__first {
+      background-image: url("images/women1.jpeg"); }
+    .team__workers .worker__second {
+      background-image: url("images/men1.jpeg"); }
+    .team__workers .worker__third {
+      background-image: url("images/women2.jpeg"); }
     .team__workers .worker__img {
+      background-position: center;
+      background-size: cover;
       border-radius: 50%;
       border: 0.7rem solid #ffffff;
       width: 22rem;
@@ -265,7 +291,6 @@ body {
       display: block; }
 
 .logo {
-  width: 90rem;
   margin: 0 auto; }
   .logo__img {
     display: inline-block;

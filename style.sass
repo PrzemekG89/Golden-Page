@@ -16,7 +16,6 @@ html
 body 
     box-sizing: border-box
 
-
 .header
     background-image: linear-gradient(to right, rgba($dark-color, 0.4), rgba($dark-color, 0.4)), url("images/Background_Image.png")
     background-color: $dark-color
@@ -63,7 +62,12 @@ body
         background-color: $white-color
         width: 100%
         padding-bottom: 2.5rem
-
+    [class^="col-"]
+        transition: all .5s
+        &:hover
+            transform: skewY(-2deg) scale(1.1)
+            box-shadow: .5rem 1rem 2rem rgba($dark-color, .2)
+            
 .aboutus
     position: relative
     &__line
@@ -83,6 +87,9 @@ body
                 display: block
         &--img
             margin: 0 auto
+            animation-name: pulse
+            animation-duration: 4s
+            animation-iteration-count: infinite
         &--text
             color: $grey-color
             font-size: 1.4rem
@@ -101,11 +108,20 @@ body
         width: 79rem
         margin: 0 auto
         .worker
+            &__first
+                background-image: url("images/women1.jpeg")
+            &__second
+                background-image: url("images/men1.jpeg")
+            &__third
+                background-image: url("images/women2.jpeg")
             &__img
+                background-position: center
+                background-size: cover
                 border-radius: 50%
                 border: .7rem solid $white-color
                 width: 22rem
                 height: 22rem
+            
             &__socjals
                 text-align: center
                 height: 5rem
@@ -129,7 +145,6 @@ body
             display: block
 
 .logo
-    width: 90rem
     margin: 0 auto
     &__img
         display: inline-block
