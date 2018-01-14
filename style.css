@@ -267,7 +267,8 @@ body {
       border-radius: 50%;
       border: 0.7rem solid #ffffff;
       width: 22rem;
-      height: 22rem; }
+      height: 22rem;
+      margin: 0 auto; }
     .team__workers .worker__socjals {
       text-align: center;
       height: 5rem; }
