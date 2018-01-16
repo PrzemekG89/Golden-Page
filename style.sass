@@ -65,7 +65,11 @@ body
         width: 100%
         padding-bottom: 2.5rem
     [class^="col-"]
+        width: 33rem
+        margin: 0 auto
         transition: all .5s
+        &:not(:last-child)
+            padding-bottom: 4rem
         &:hover
             transform: skewY(-2deg) scale(1.1)
             box-shadow: .5rem 1rem 2rem rgba($dark-color, .2)
@@ -81,6 +85,7 @@ body
         top: 30rem
         z-index: -1
     &__content
+        position: relative
         .heading
             &--main
                 display: block
@@ -88,10 +93,10 @@ body
             &--sub
                 display: block
         &--img
-            margin: 0 auto
             animation-name: pulse
             animation-duration: 4s
             animation-iteration-count: infinite
+
         &--text
             color: $grey-color
             font-size: 1.4rem
@@ -108,7 +113,6 @@ body
     background-color: $lightblue-color
     &__workers
         width: 80%
-        
         margin: 0 auto
         .worker
             &__first
@@ -150,6 +154,7 @@ body
 
 .logo
     margin: 0 auto
+    text-align: center
     &__img
         display: inline-block
         margin: 3.5rem auto
@@ -192,3 +197,37 @@ body
         justify-content: center
         &--icon
             background-color:  $dark-color
+
+
+@media (max-width: 590px)
+    .large-padding
+        padding: 7rem 0
+    .services
+        &__text
+            padding-bottom: 1.5rem
+    .aboutus
+        &__line
+            display: none
+        &__content
+            height: 22rem
+            &--text
+                color: $dark-color
+            &--img
+                position: absolute
+                z-index: -1
+                opacity: 0.5
+        &__story
+            &--main 
+                left: 37%
+
+    .team
+        &__workers
+            .worker
+                padding: 1.5rem 0
+    .contact
+        .col
+            padding-right: 5px
+            padding-left: 5px
+    .footer
+        &__copy
+            padding-bottom: 1rem
