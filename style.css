@@ -154,6 +154,33 @@
 .left {
   text-align: left; }
 
+@media (max-width: 800px) {
+  .aboutus__line {
+    display: none; }
+  .aboutus__content {
+    height: 22rem; }
+    .aboutus__content--text {
+      color: #222222; }
+    .aboutus__content--img {
+      position: absolute;
+      z-index: -1;
+      opacity: 0.5; } }
+
+@media (max-width: 590px) {
+  .large-padding {
+    padding: 7rem 0; }
+  .services__text {
+    padding-bottom: 1.5rem; }
+  .services__story--main {
+    left: 37%; }
+  .team__workers .worker {
+    padding: 1.5rem 0; }
+  .contact .col {
+    padding-right: 5px;
+    padding-left: 5px; }
+  .footer__copy {
+    padding-bottom: 1rem; } }
+
 *,
 *::after,
 *::before {
@@ -252,10 +279,22 @@ body {
   .aboutus__story {
     position: relative;
     padding-top: 4rem; }
-    .aboutus__story--main {
-      position: absolute;
-      top: 8.5rem;
-      left: 44%; }
+    .aboutus__story--text {
+      margin: 0 auto;
+      text-transform: uppercase;
+      font-weight: bold;
+      height: 19rem;
+      width: 19rem;
+      font-size: 1.7rem;
+      letter-spacing: 1px;
+      color: #ffffff;
+      background-color: #fed136;
+      border-radius: 50%;
+      border: 6px solid #F2F2F2;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-shadow: 1px 1px 0 #222222; }
 
 .team {
   background-color: #f9f9f9; }
@@ -347,28 +386,3 @@ body {
   justify-content: center; }
   .footer__socjals--icon {
     background-color: #222222; }
-
-@media (max-width: 590px) {
-  .large-padding {
-    padding: 7rem 0; }
-  .services__text {
-    padding-bottom: 1.5rem; }
-  .aboutus__line {
-    display: none; }
-  .aboutus__content {
-    height: 22rem; }
-    .aboutus__content--text {
-      color: #222222; }
-    .aboutus__content--img {
-      position: absolute;
-      z-index: -1;
-      opacity: 0.5; }
-  .aboutus__story--main {
-    left: 37%; }
-  .team__workers .worker {
-    padding: 1.5rem 0; }
-  .contact .col {
-    padding-right: 5px;
-    padding-left: 5px; }
-  .footer__copy {
-    padding-bottom: 1rem; } }
