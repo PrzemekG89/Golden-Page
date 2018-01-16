@@ -134,7 +134,7 @@
     transform: scale(1.2); }
 
 .container {
-  width: 90rem; }
+  width: 80%; }
 
 .small-padding {
   padding: 2rem 0; }
@@ -164,7 +164,9 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
 
 .header {
   background-image: linear-gradient(to right, rgba(34, 34, 34, 0.4), rgba(34, 34, 34, 0.4)), url("images/Background_Image.png");
@@ -253,7 +255,7 @@ body {
 .team {
   background-color: #f9f9f9; }
   .team__workers {
-    width: 79rem;
+    width: 80%;
     margin: 0 auto; }
     .team__workers .worker__first {
       background-image: url("images/women1.jpeg"); }
