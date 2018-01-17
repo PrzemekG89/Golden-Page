@@ -10,6 +10,14 @@
                 position: absolute
                 z-index: -1
                 opacity: 0.5
+    .portfolio
+        [class^="col-"]
+            &:not(:last-child)
+                margin-bottom: 4rem
+    .team
+        &__workers
+            .worker
+                padding: 1.5rem 0
 
 @media (max-width: 590px)
     .heading-primary
@@ -20,10 +28,6 @@
     .services
         &__text
             padding-bottom: 1.5rem
-    .team
-        &__workers
-            .worker
-                padding: 1.5rem 0
     .contact
         .col
             padding-right: 5px

@@ -67,13 +67,16 @@ body
         padding-bottom: 2.5rem
     [class^="col-"]
         width: 33rem
+        padding: 1rem
         margin: 0 auto
         transition: all .5s
-        &:not(:last-child)
-            padding-bottom: 4rem
+        z-index: 1
+
         &:hover
             transform: skewY(-2deg) scale(1.1)
             box-shadow: .5rem 1rem 2rem rgba($dark-color, .2)
+            z-index: 20
+            background-color: $lightblue-color
             
 .aboutus
     position: relative
@@ -149,12 +152,12 @@ body
                 &--icon
                     border: 3px solid $dark-color
                     padding-top: 0.7rem
-                    transition-duration: .5s
                     [class^="icon-"]
                         color: $dark-color
-                        transition-duration: .5s
+                        transition: all .5s
                     &:hover
-                        border: none
+                        border: 3px solid transparent
+                        transform: translateY(-2px)
                         [class^="icon-"]
                             color: $white-color
     &__text
@@ -171,6 +174,7 @@ body
     &__img
         display: inline-block
         margin: 3.5rem auto
+
 
 .contact
     background-color: $dark-color
